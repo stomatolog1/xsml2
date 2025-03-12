@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<xs:complexType  name="OfficesType">
+    <xs:all>
+      <xs:element name="code" type="xs:ID" />
+      <xs:element name="office" type="xs:string" minOccurs="1" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType  name="PersonType">
+    <xs:all>
+      <xs:element name="name" type="NameType" maxOccurs="1" />
+      <xs:element name="address" type="AdressType" maxOccurs="1" />
+      <xs:element name="phone" type="PhonesType" />
+    </xs:all>
+  </xs:complexType>
+  
+    <xs:complexType  name="NameType">
+    <xs:all>
+      <xs:element name="first" type="xs:string" />
+      <xs:element name="surname" type="xs:string" />
+    </xs:all>
+  </xs:complexType>
+  
+     <xs:complexType name="AdressType">
+    <xs:all>
+      <xs:element name="city" type="xs:string" />
+      <xs:element name="streer" type="xs:string" />
+      <xs:element name="index" type="IndexType" />
+    </xs:all>
+  </xs:complexType>
+  
+  
+
+  <xs:simpleType  name="IndexType">
+    <xs:restriction base='xs:integer'>
+      <xs:pattern value="\d{6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+   <xs:simpleType  name="PhonesType">
+    <xs:restriction base='xs:string'>
+      <xs:pattern value="\d{3}-\d{2}-\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  
+  <xs:element name="notebook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Offices" type="OfficesType" />
+        <xs:element name="Person" type="PersonType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+

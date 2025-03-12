@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<notebook
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="KT2.xsd">
+<Offices>
+    <code>code</code>
+    <office>Office</office>
+</Offices>
+
+<Person>
+
+    <name>  
+        <first>Иван</first>
+        <surname>Иванович</surname>
+    </name>
+    
+    <address>
+        <city>Подольск</city>
+        <streer>Кирова</streer>
+        <index>123456</index>
+    </address>
+    
+    
+    <phone>123-32-22</phone>
+    
+    
+</Person>
+
+
+</notebook>
